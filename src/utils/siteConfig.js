@@ -14,6 +14,9 @@ module.exports = {
   shareImageHeight: 600, // Change to the height of your default share image
   siteLogo: '/logos/logo-512.png', // Logo used for SEO, RSS, and App manifest
   
+  headerTitle: "jeffsaenz.me",
+  headerSubTitle: "front end web developer / pit bull owner",
+
   // Offline Manifest and Progress color
   backgroundColor: '#e9e9e9',
   themeColor: '#121212', 

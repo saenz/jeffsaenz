@@ -5,7 +5,7 @@ import config from '../utils/siteConfig'
 //import '../styles/global'
 import theme1 from '../styles/theme'
 
-import Menu from '../components/Menu'
+import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import favicon from '../images/favicon.ico'
 
@@ -89,16 +89,18 @@ const Template = ({ children }) => {
       </Helmet>
 
       <Container>
+        <div>
         <ThemeProvider theme={theme1}>
           <div>
-            <Menu />
-            {children()}
+          <Nav />
+          {children()}
           </div>
         </ThemeProvider>
         {/* Footer placed in seperate ThemeProvider to avoid Rendering an extra DIV in HTML output  */}
         <ThemeProvider theme={theme1}>
           <Footer />
         </ThemeProvider>
+        </div>
       </Container>
     </div>
   )

@@ -23,6 +23,7 @@ const colors = {
 }
 
 const theme = {
+	color: 			colors,
   	primary: 		colors.blue,
   	secondary:     	colors.gray700,
 	success:       	colors.green,
