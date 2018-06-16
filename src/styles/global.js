@@ -1,4 +1,4 @@
-import { injectGlobal } from 'styled-components'
+import { injectGlobal } from 'react-emotion'
 
 injectGlobal`
   /* http://meyerweb.com/eric/tools/css/reset/

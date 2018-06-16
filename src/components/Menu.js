@@ -1,9 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styled from 'styled-components'
+import styled from 'react-emotion'
+import Headroom from 'react-headroom'
+import theme from '../utils/theme';
 
 const Header = styled.header`
-  background: ${props => props.theme.colors.base};
+  background: ${theme.primary};
   width: 100%;
   padding: 1.5em 0;
 `
@@ -46,27 +48,27 @@ const activeLinkStyle = {
 
 const Menu = () => {
   return (
-    <Header>
-      <Nav>
-        <ul>
-          <li>
-            <Link to="/" exact activeStyle={activeLinkStyle}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about/" activeStyle={activeLinkStyle}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact/" activeStyle={activeLinkStyle}>
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </Nav>
-    </Header>
+      <Header>
+        <Nav>
+          <ul>
+            <li>
+              <Link to="/" exact activeStyle={activeLinkStyle}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about/" activeStyle={activeLinkStyle}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact/" activeStyle={activeLinkStyle}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </Nav>
+      </Header>
   )
 }
 

@@ -1,12 +1,76 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { ThemeProvider } from 'styled-components'
 import config from '../utils/siteConfig'
-import '../styles/global'
-import theme from '../styles/theme'
+
+//import '../styles/global'
+import theme1 from '../styles/theme'
+
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 import favicon from '../images/favicon.ico'
+
+import styled from 'react-emotion'
+import { injectGlobal } from 'emotion';
+import { ThemeProvider } from 'emotion-theming'
+//import SEO from '../components/SEO';
+
+import theme from '../utils/theme';
+import { media } from '../utils/media';
+
+import Container from '../components/Container'
+
+injectGlobal`
+  ::selection {
+    color: ${theme.bg};
+    background: ${theme.primary};
+  }
+  body {
+    background: ${theme.bg};
+    color: ${theme.default};
+    //@media ${media.sm} {
+    //  font-size: 14px;
+    //}
+  }
+  a {
+    color: ${theme.dark};
+    text-decoration: none;
+    transition: all ${theme.transitionTime};
+  }
+  a:hover {
+    color: ${theme.primary};
+  }
+  h1, h2, h3, h4 {
+    color: ${theme.dark};
+  }
+  blockquote {
+    font-style: italic;
+    position: relative;
+  }
+  blockquote:before {
+    content: "";
+    position: absolute;
+    background: ${theme.primary};
+    height: 100%;
+    width: 6px;
+    margin-left: -1.6rem;
+  }
+  label {
+    margin-bottom: .5rem;
+    color: ${theme.dark};
+  }
+  input, textarea {
+    border-radius: .5rem;
+    border: none;
+    background: rgba(0, 0, 0, 0.05);
+    padding: .25rem 1rem;
+    &:focus {
+      outline: none;
+    }
+  }
+  ol, ul {
+    list-style-type: none;
+  }
+`;
 
 const Template = ({ children }) => {
   return (
@@ -24,16 +88,18 @@ const Template = ({ children }) => {
         <meta property="og:site_name" content={config.siteTitle} />
       </Helmet>
 
-      <ThemeProvider theme={theme}>
-        <div className="siteContent">
-          <Menu />
-          {children()}
-        </div>
-      </ThemeProvider>
-      {/* Footer placed in seperate ThemeProvider to avoid Rendering an extra DIV in HTML output  */}
-      <ThemeProvider theme={theme}>
-        <Footer />
-      </ThemeProvider>
+      <Container>
+        <ThemeProvider theme={theme1}>
+          <div>
+            <Menu />
+            {children()}
+          </div>
+        </ThemeProvider>
+        {/* Footer placed in seperate ThemeProvider to avoid Rendering an extra DIV in HTML output  */}
+        <ThemeProvider theme={theme1}>
+          <Footer />
+        </ThemeProvider>
+      </Container>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'react-emotion'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 
@@ -35,7 +35,7 @@ const Post = styled.li`
 
 const Title = styled.h2`
   font-size: 1.5em;
-  font-weight: 600;
+  font-weight: 200;
   text-transform: capitalize;
   margin: 1rem 1rem 0.5rem 1rem;
 `

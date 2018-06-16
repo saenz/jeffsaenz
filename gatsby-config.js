@@ -37,8 +37,15 @@ module.exports = {
         siteUrl: config.siteUrl,
       },
     },
-    'gatsby-plugin-styled-components',
+    //'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-emotion',
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/utils/typography.js',
+      }
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
