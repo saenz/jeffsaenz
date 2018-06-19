@@ -49,7 +49,7 @@ const nav = css`
     border: none;
     border-radius: 8px;
     transition-duration: 0.4s;
-    font-size: .75rem;
+    //font-size: .75rem;
     .active {
       background-color:#e2e2e2;
     }
