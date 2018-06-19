@@ -37,7 +37,7 @@ const socialList = css`
   margin: 0;
   li {
     margin: 0;
-    padding-right: .75rem;
+    padding-right: 1rem;
     svg {
       opacity: 0.5;
       transition: opacity 0.15s ease-in;
@@ -58,7 +58,6 @@ const navList = css`
   justify-content: center;
   li {
     margin:0;
-    padding-right: 1rem;
     opacity: 0.5;
     transition: opacity 0.15s ease-in;
     transition: color 0.15s ease-in;
@@ -67,6 +66,9 @@ const navList = css`
       box-shadow: none;
       opacity: 1;
       transition: opacity 0.15s ease-in;
+    }
+    &:not(:last-child) {
+      padding-right: 1rem;
     }
   }
 `
