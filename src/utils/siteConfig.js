@@ -25,7 +25,7 @@ module.exports = {
   copyright: 'Copyright © 2018 GCN User', 
 
   // Settings for typography.js
-  headerFontFamily: 'Bitter',
-  bodyFontFamily: 'Open Sans',
+  headerFontFamily: 'Montserrat',
+  bodyFontFamily: 'Montserrat',
   baseFontSize: '16px',
 }

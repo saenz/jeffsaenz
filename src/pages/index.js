@@ -1,8 +1,17 @@
 import React from 'react'
+import Link from 'gatsby-link'
+
 import CardList from '../components/CardList'
 import Card from '../components/Card'
-import PageTitle from '../components/PageTitle'
+import SectionTitle from '../components/SectionTitle'
+
+import Section from '../components/Section'
+import Hr from '../components/Hr'
+
 import SEO from '../components/SEO'
+import styled, {css} from 'react-emotion'
+
+import theme from '../utils/theme';
 
 const Index = ({ data }) => {
   const posts = data.allContentfulPost.edges
@@ -10,9 +19,22 @@ const Index = ({ data }) => {
   return (
     <div>
       <SEO />
-        <PageTitle small>
-          Latest Stories
-        </PageTitle>
+
+      <Section>
+        <p>
+          <strong>Welcome</strong> to my personal portfolio site. I'm a front end web engineer that enjoys the simple things in life like man's best friend (dogs)
+          and riding motocycles.
+        </p>
+      </Section>
+
+      <Section>
+        <h1>Latest Stories</h1>
+        <Hr />
+        <p>
+          Recent stories discussing general ideas about family life, front end engineering, sports 
+          and the joys of raising pit bulls. 
+        </p>
+
         <CardList>
           {posts.map(({ node: post }) => (
             <Card
@@ -25,6 +47,7 @@ const Index = ({ data }) => {
             />
           ))}
         </CardList>
+      </Section>
     </div>
   )
 }

@@ -18,8 +18,8 @@ const Title = styled.h1`
   }
 `
 
-const PageTitle = props => {
+const SectionTitle = props => {
   return <Title small={props.small}>{props.children}</Title>
 }
 
-export default PageTitle
+export default SectionTitle

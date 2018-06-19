@@ -37,6 +37,7 @@
     "path": "^0.12.7",
     "prismjs": "^1.14.0",
     "react-emotion": "^9.2.3",
+    "react-feather": "^1.1.0",
     "react-headroom": "^2.2.2",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.13",

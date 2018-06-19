@@ -92,8 +92,8 @@ const Template = ({ children }) => {
         <div>
         <ThemeProvider theme={theme1}>
           <div>
-          <Nav />
-          {children()}
+            <Nav />
+            {children()}
           </div>
         </ThemeProvider>
         {/* Footer placed in seperate ThemeProvider to avoid Rendering an extra DIV in HTML output  */}

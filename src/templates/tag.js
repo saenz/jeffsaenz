@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Card from '../components/Card'
 import CardList from '../components/CardList'
-import PageTitle from '../components/PageTitle'
+import SectionTitle from '../components/SectionTitle'
 import Container from '../components/Container'
 
 const TagTemplate = ({ data }) => {
@@ -24,7 +24,7 @@ const TagTemplate = ({ data }) => {
       </Helmet>
 
       <Container>
-        <PageTitle small>Tag: &ldquo;{title}&rdquo;</PageTitle>
+        <SectionTitle small>Tag: &ldquo;{title}&rdquo;</SectionTitle>
 
         <CardList>
           {posts.map(post => (
