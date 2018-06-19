@@ -37,7 +37,7 @@ const socialList = css`
   margin: 0;
   li {
     margin: 0;
-    padding-right: 1rem;
+    padding-right: .75rem;
     svg {
       opacity: 0.5;
       transition: opacity 0.15s ease-in;
@@ -125,7 +125,7 @@ const Nav = () => {
             <li className="icon">
               <a
                   title="Link to our Twitter account"
-                  href='https://twitter.com'
+                  href='https://twitter.com/dstppluto'
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -135,7 +135,7 @@ const Nav = () => {
             <li className="icon">              
               <a
                 title="Link to our Instagram account"
-                href='https://instagram.com'
+                href='https://www.instagram.com/handymanio/'
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -145,7 +145,7 @@ const Nav = () => {
             <li className="icon">
               <a
                   title="Link to our LinkedIn account"
-                  href='https://linkedin.com'
+                  href='https://www.linkedin.com/in/jeffsaenz/'
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -155,7 +155,7 @@ const Nav = () => {
             <li className="icon"> 
               <a
                 title="Link to our Github account"
-                href='https://github.com'
+                href='https://github.com/saenz'
                 target="_blank"
                 rel="noopener noreferrer"
               >
