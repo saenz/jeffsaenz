@@ -8,54 +8,65 @@ import Avatar from '../components/Avatar'
 import avatarImg from '../images/jeff.jpg'
 import Twitter from 'react-feather/dist/icons/twitter';
 import Instagram from 'react-feather/dist/icons/instagram';
+import Github from 'react-feather/dist/icons/github';
+import LinkedIn from 'react-feather/dist/icons/linkedin';
 
-const navBar = css`
-  display: flex;
-  margin-bottom: 1.5rem;
-  background-color: ${theme.primary};
-  padding: .5rem 1rem;
+
+const header = css`
+  margin-top: 10px;
+  padding: 0 0 0 0;
 `
-const navBarBrand = css`
-  display: flex;
-  flex-direction: row;
-  font-size: 1rem;
-  line-height: inherit;
-  white-space: nowrap;
-  color: ${theme.color.white};
-  img {
-    width: 60px;
-    height: 60px;
-    border-radius: 65% 75%;
-    margin-right: 0.875rem;
-    margin-bottom: 0;
-  }
-  p {
-    margin-bottom: 0;
-  }
+const brand = css`
+  background-color: #375a7f; 
+  padding: 8px 0;
 `
 const nav = css`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
-  background-color: ${theme.color.white};
-  padding: 4px 0;
-  margin-top: 5px;
-  div {
-    flex-grow: 0;
-  }
-  button {
-    background-color: #fff;
-    border: none;
-    border-radius: 8px;
-    transition-duration: 0.4s;
-    //font-size: .75rem;
-    .active {
-      background-color:#e2e2e2;
+  justify-content: center;
+  background-color: #e2e2e2;
+  margin-bottom: 0;
+  padding: .5rem 0 .4rem 0;
+  border: 1px solid #c1bbbb;
+`
+const socialList = css`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  li {
+    margin: 0;
+    padding-right: 1rem;
+    svg {
+      opacity: 0.5;
+      transition: opacity 0.15s ease-in;
+      transition: color 0.15s ease-in;
+      &:hover {
+        text-decoration: none;
+        box-shadow: none;
+        opacity: 1;
+        transition: opacity 0.15s ease-in;
+      }
     }
+  }
+`
+const navList = css`
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  li {
+    margin:0;
+    padding-right: 1rem;
+    opacity: 0.5;
+    transition: opacity 0.15s ease-in;
+    transition: color 0.15s ease-in;
     &:hover {
-      background-color: #375a7f; 
-      color: white;
+      text-decoration: none;
+      box-shadow: none;
+      opacity: 1;
+      transition: opacity 0.15s ease-in;
     }
   }
 `
@@ -82,90 +93,94 @@ const bio = css`
   align-items: center;
   flex-wrap: nowrap;
   margin: 8px 0;
-  font-size: 1.75em;
+  font-size: 1.75rem;
   color: ${theme.color.white};
   div {
-    //border: 1px solid green;
     &:first-child {
-      padding-right: 8px;
-    }
-    &:last-child {
-      padding-left: 8px;
-    }
-  }
-`
-
-const socialList = css`
-  border: 1px solid #bab5b5;
-  padding: 4px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: rgba(0,0,0,0.7);
-  //background-color: rgba(255, 255, 255, 0.3);
-  //opacity: .5;
-  background-color: #e2e2e2;
-  div {
-    font-size: 16px;
-    &:not(:last-child) {
       padding-right: 1rem;
     }
+    &:last-child {
+      padding-left: 1rem;
+    }
   }
-  .icon {
-    height: 18px;
-  }
-`
-
-const header = css`
-  //background-color: #375a7f;
-  margin-top: 10px;
-  padding: 0 0 0 0;
 `
 
 const Nav = () => {
   return (
     <header className={header}>
 
-      <nav className={nav} style={{backgroundColor: "#fff"}}>
-        <div>
-          <Link to="/">
-            <button className="active">Home</button>
-          </Link>
-        </div>
-        <div>
-          <Link to="/contact">
-            <button>Contact</button>
-          </Link>
-        </div>
-        {/*<div className={spacer}>
-          <span>J</span><span></span><span>S</span>
-        </div>*/}
-        <div><button>Stories</button></div>
-        <div><button>About</button></div>
-      </nav>
-
-      <div style={{backgroundColor: "#375a7f", padding: "8px 0"}}>
+      <div className={brand}>
         <Link to="/">
           <div className={bio}>
-            <div>Jeff</div>
+            <div style={{width: "6rem", textAlign: "right"}}>Jeff</div>
             <Avatar img={avatarImg} />
             <div>Saenz</div>
           </div>
         </Link>
       </div>
 
-      <div className={socialList}>
-        <div className="icon">
-          <Twitter color={"rgba(0,0,0,0.7)"} size={18} />
-        </div>
-        <div className="icon">
-          <Instagram color={"rgba(0,0,0,0.7)"} size={18}/>
+      <nav className={nav}>
+        <div>
+          <ul className={socialList}>
+            <li className="icon">
+              <a
+                  title="Link to our Twitter account"
+                  href='https://twitter.com'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Twitter color={"rgba(0,0,0,0.7)"} size={24} />
+              </a>
+            </li>
+            <li className="icon">              
+              <a
+                title="Link to our Instagram account"
+                href='https://instagram.com'
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram color={"rgba(0,0,0,0.7)"} size={24}/>
+              </a>
+            </li>
+            <li className="icon">
+              <a
+                  title="Link to our LinkedIn account"
+                  href='https://linkedin.com'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedIn color={"rgba(0,0,0,0.7)"} size={24} />
+              </a>
+            </li>
+            <li className="icon"> 
+              <a
+                title="Link to our Github account"
+                href='https://github.com'
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github color={"rgba(0,0,0,0.7)"} size={24}/>
+              </a>
+            </li>
+          </ul>
         </div>
         <div>
-          @jeffsaenz
+          <ul className={navList}>
+            <li> | </li>
+            <li>          
+              <Link to="/about">
+                <span className="active">About</span>
+              </Link>
+            </li>
+            <li> | </li>
+            <li>
+              <Link to="/contact">
+                <span className="active">Contact</span>
+              </Link>
+            </li>
+          </ul>
         </div>
-      </div>
+      </nav>
 
 
     </header>
