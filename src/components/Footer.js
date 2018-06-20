@@ -30,6 +30,7 @@ const image = css`
 
 const Wrapper = styled("footer")`
   //border: 1px solid green;
+  background-color: #efefef;
 `
 
 const List = styled("ul")`
@@ -37,10 +38,10 @@ const List = styled("ul")`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   padding: .75rem 0 .5rem 0;
   border-top: 1px solid rgb(233, 233, 233);
-  margin: 1.5rem 0 .75rem 0;
+  margin: 0 0 .75rem 0;
 `
 
 const Item = styled("li")`
