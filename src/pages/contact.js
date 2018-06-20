@@ -20,7 +20,6 @@ const Contact = ({ data }) => {
 
       <Container>
         <Section>
-          <h1>Contact</h1>
           <ContactForm />
         </Section>
       </Container>

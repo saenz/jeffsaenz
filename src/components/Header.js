@@ -20,7 +20,7 @@ const brand = css`
   background-color: #375a7f; 
   padding: 8px 0;
 `
-const nav = css`
+const topNav = css`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -107,7 +107,7 @@ const bio = css`
   }
 `
 
-const Nav = () => {
+const Nav = (props) => {
   return (
     <header className={header}>
 
@@ -115,13 +115,13 @@ const Nav = () => {
         <Link to="/">
           <div className={bio}>
             <div style={{width: "6rem", textAlign: "right"}}>Jeff</div>
-            <Avatar img={avatarImg} />
+            <Avatar image={avatarImg} />
             <div>Saenz</div>
           </div>
         </Link>
       </div>
 
-      <nav className={nav}>
+      <nav className={topNav}>
         <div>
           <ul className={socialList}>
             <li className="icon">
@@ -183,7 +183,6 @@ const Nav = () => {
           </ul>
         </div>
       </nav>
-
 
     </header>
   )

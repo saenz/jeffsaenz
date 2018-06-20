@@ -13,9 +13,9 @@ import styled, {css} from 'react-emotion'
 
 import theme from '../utils/theme';
 
-const Index = ({ data }) => {
-  const posts = data.allContentfulPost.edges
-
+const Index = (props) => {
+  const posts = props.data.allContentfulPost.edges
+//console.log('home page router = ' + JSON.stringify(props))
   return (
     <div>
       <SEO />
@@ -29,7 +29,7 @@ const Index = ({ data }) => {
 
       <Section>
         <h1>Latest Stories</h1>
-        <Hr />
+        {/*<Hr />*/}
         <p>
           Recent stories discussing general ideas about family life, front end engineering, sports 
           and the joys of raising pit bulls. 

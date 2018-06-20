@@ -10,14 +10,14 @@ const avatar = css`
   margin-bottom:0;
 `
 
-const Avatar = ({img}) => {
+const Avatar = ({image}) => {
   return (
-      <img className={avatar} src={img} alt="site avatar" />
+      <img className={avatar} src={image} alt="site avatar" />
   )
 }
 
 Avatar.propTypes = {
-  img: PropTypes.element.required
+  image: PropTypes.string.isRequired
 };
 
 export default Avatar

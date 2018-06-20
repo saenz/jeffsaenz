@@ -41,7 +41,7 @@ const Container = ({ children, fluid }) => {
 }
 
 Container.propTypes = {
-    children: PropTypes.element.isRequired,
+    children: PropTypes.node.isRequired,
     fluid: PropTypes.bool
 }
 

@@ -6,7 +6,7 @@ const Section = styled.section`
   h1 {
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: .25rem;
+    margin-bottom: .5rem;
   }
 `
 export default Section

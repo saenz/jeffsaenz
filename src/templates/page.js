@@ -18,7 +18,6 @@ const PageTemplate = ({ data }) => {
       <SEO pagePath={slug} postNode={postNode} pageSEO />
 
       <Container>
-        <SectionTitle>{title}</SectionTitle>
         <PageBody body={body} />
       </Container>
     </div>
