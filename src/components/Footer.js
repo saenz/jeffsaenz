@@ -28,13 +28,10 @@ const image = css`
   opacity: .6;
 `
 const Wrapper = styled("footer")`
-  //border: 1px solid green;
-  background-color: #efefef;
-
+  margin-bottom: .5rem;
   p {
     text-align: center;
-    margin-bottom: 0;
-    font-size: .75rem;
+    font-size: .75em;
   }
 `
 const List = styled("div")`
@@ -54,64 +51,68 @@ const navContainer = css`
 `
 
 const Footer = () => (
-  <Wrapper>
-    <p style={{borderBottom: "1px solid #e2e2e2", fontSize: ".5rem"}}>built using</p>
-    <List>
-        <a 
-          title="Gatsby"
-          href="https://gatsbyjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src={"data:image/svg+xml;" + gatsbyImageBase64}
-            className={image}
-            alt="Gatsby"
-          />
-        </a>
-        <a 
-          title="Contentful"
-          href="https://contentful.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://images.ctfassets.net/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
-            className={image}
-            alt="Powered by Contentful"
-          />
-        </a>
-        <a 
-          title="ReactJs"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img 
-            src={ReactIcon} 
-            className={image} 
-            alt="React"
-          />
-        </a>
-        <a 
-          title="EmotionJs"
-          href="https://emotion.sh/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img 
-            src={EmotionIcon} 
-            className={image} 
-            alt="Emotion" />
-        </a>
-    </List>
+  <Wrapper>  
 
     <div className={navContainer}>
       <Nav />
     </div>
 
-    <p>jeffsaenz.me</p>
+    <div style={{ padding: "5px 10px", backgroundColor: "#efefef" }}>
+      <p style={{marginBottom: 0, borderBottom: "1px solid #e2e2e2", paddingBottom: "5px"}}>built using</p>
+      <List>
+          <a 
+            title="Gatsby"
+            href="https://gatsbyjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={"data:image/svg+xml;" + gatsbyImageBase64}
+              className={image}
+              alt="Gatsby"
+            />
+          </a>
+          <a 
+            title="Contentful"
+            href="https://contentful.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://images.ctfassets.net/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
+              className={image}
+              alt="Powered by Contentful"
+            />
+          </a>
+          <a 
+            title="ReactJs"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img 
+              src={ReactIcon} 
+              className={image} 
+              alt="React"
+            />
+          </a>
+          <a 
+            title="EmotionJs"
+            href="https://emotion.sh/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img 
+              src={EmotionIcon} 
+              className={image} 
+              alt="Emotion" />
+          </a>
+      </List>
 
+    </div>
+
+    <p style={{margin: "5px 0"}}>jeffsaenz.me</p>
+    
   </Wrapper>
 )
 
