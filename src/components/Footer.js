@@ -10,43 +10,44 @@ const gatsbyImageBase64 =
 const emotionImageBase64 =
   "base64, iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAAFZklEQVQ4y1WUaUxUVxTHH6BN2qTRpGlN6Ic2MY1QRajaWJB9KYZFAR32bZCB2WAYEEG0gIIDgyyCIyCrbMMiMOyMyDYbW6XsWtBGoYs1 / dDQWNsKc//lPSqNJ7k5596c/++dd8/Jpaj/rMyvgPHl/jcMmL1/7geDEW39Wk7vhjaq96Wa1zN7X9BeUMmXWbzRdJ9vMqT9H9nPqJizPGrHeG6RjD/nGkrh0iaTVOlfnPVTwjweCXT6Jb4Wj2MmsSr+DtPCITIoUpTYcBzfo/NGk3uMaD+RNEC9ZWccvShMgonvRbRktgc3QBHcvLkkUJMlgYbM81T6rfV6kafBWsIsdOL++TTBJWM6vzehmSmiNKLgf+AER8l8qTWkmkdXMssdIcVnC0m1Tx3U7D6yyNeQBb4aW1Aa/s+qeAbjontL4Xz2HlpXIZQZ7MBkrJw34a6tO5tfjh3DDGdsYzotG3czPEgOS4bukGYsCFQ0dBscq/575fwUhmM6b9PCNfGsEftK+DalM7yeod/yu/7xRLTy5QxvED3+A+R5LY90tvuR7CN5KPbMRRe7DZPcAbIUpyMr4kkoY1t/VITVr3VG1ZvR+qqQm4ZvAQv9rxpPRQ29Go6So4EfRTrlIlJsX4bRPUUoM5egIjIVivA6jHGV5HvROBbOa9ZLIm6k5nlJ4mj9M8Hc9m83BVcwQXLA6b0atmpNfVGMrhpTfXRAClHsleC+cREWLnph7I4ZqqJEpNL/JtFwezceJ05hNLWHnhfDvGDJuzt3mONzZTsIpIz6/ZVTC6UxaK5gbdq4WkMaFIlW03y01QZA0+iKII8zhOvMI4rQ+o25OA1GU7ov0tKnWTNG7K9DKMrLxptycnGg5qLVTJdHQzpKyi7fQpu0bKM2LoEMXW6FVJyL1dGvsD6XjjtSXxRdOE2qAmVQ8XvQcaH+BK1rEVYb7lToY+9DjYUPMAfZrgU17fGpGHRib4x8JCeZkTfwRGsJfHsA+gkTYPlL8rTLYrMoPA41YUV1tEbpW2ggCUujnK1cKCrSjkPF2okYGNeOF5romIzSszl6+YEsksSpxuykMzD1GdZ1X0A/eWgrPkjWlCYbqYF+iLaKZ+Yt0Slx1051QXbBTENYtr6fRNtx8zh2vI5rLumIPyXRDyrdCLSfYiThMLRb68/7ZsDifqKUWhGujQhxDvG/cxwizGk9315g4G7lTlEO1g6U4kgf5WPrYnTMxnZfjCV3KsMxBdH+VzYTsyLJSt9x8rzpAH5uNMUrzSHI5SySFJpPSlykOGcZLDltyXKmgYLjIgMnKyeKcvKNpL5xSWKq5JwI8UgLLfgtsFIFq1KF/vNrHRDnCfGwxQSLLQchK/SEaX4fcR5e3kyrm0djbMsQipbf313y1CCdfXV7Bj13v0NN5r9gNlL3JC/h1cY5787pv1wnnuFIk470NbiSTa0J1kfMMFJxFA71XXCefg5PxdRG1aV7qGXduPvm+kK9+QZUA7ZfmHTh7ZNd4fLSGq8i9U036csMfgVOVU2QvHYxwYP9wAMT1Fe7IaCol+Ty64jcp5TowrvIGKd3Xca7XWhx0uNDBlQif8F0WJIor3qQOo8n/HFoowfQzqohJd4yRCZWYWXwBH4ZMEVMbAZKvcsxGtYI9fUULPKHN3Xx45DwyldF3tx9DNDPNZQZaMfjjpykxK0xidW9fsTbeqqEWgxHdBCZRyUpl3BQk+mJ6x6lUJ3rxrxQTQYz44la3KtPDsrFUTPzHyysDxvvjI6Xj5+xudnBX23t3ZGf0qlf5Kowx1PhoVAHFbsX2YH5kAbkoi+4jTmb5Q1jMqofFZwmWB+zeW1mbgYHO4fLNOtfXsADwIOnFl4AAAAASUVORK5CYII=";
 
-
 const image = css`
-  height: 50px;
+  height: 32px;
   padding: 5px;
   width: auto;
+  margin: 0 auto;
   //margin: 0;
   //opacity: 0.7;
-  //position: absolute; 
-  //top: 0px; 
-  //left: 0px; 
-  transition: opacity 0.5s ease 0.25s; 
-  //width: 100%; 
-  //height: 100%; 
-  //object-fit: cover; 
-  //object-position: center center; 
+  //position: absolute;
+  //top: 0px;
+  //left: 0px;
+  transition: opacity 0.5s ease 0.25s;
+  //width: 100%;
+  //height: 100%;
+  //object-fit: cover;
+  //object-position: center center;
   opacity: .6;
 `
-
 const Wrapper = styled("footer")`
   //border: 1px solid green;
   background-color: #efefef;
-`
 
-const List = styled("ul")`
-  list-style-type: none;
+  p {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: .75rem;
+  }
+`
+const List = styled("div")`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-flow: row nowrap;
-  padding: .75rem 0 .5rem 0;
-  border-top: 1px solid rgb(233, 233, 233);
-  margin: 0 0 .75rem 0;
+  flex-wrap: nowrap;
+  padding-left: 0;
 `
-
-const Item = styled("li")`
+const Item = styled("div")`
   display: inline-block;
 `
+
 
 const navContainer = css`
   width:100%;
@@ -54,45 +55,62 @@ const navContainer = css`
 
 const Footer = () => (
   <Wrapper>
+    <p style={{borderBottom: "1px solid #e2e2e2", fontSize: ".5rem"}}>built using</p>
     <List>
-      <Item>
-        <a>
+        <a 
+          title="Gatsby"
+          href="https://gatsbyjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src={"data:image/svg+xml;" + gatsbyImageBase64}
             className={image}
+            alt="Gatsby"
           />
         </a>
-      </Item>
-      <Item>
-        <a>
+        <a 
+          title="Contentful"
+          href="https://contentful.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src="https://images.ctfassets.net/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
             className={image}
             alt="Powered by Contentful"
           />
         </a>
-      </Item>
-      <Item>
-        <a>
-          <img src={ReactIcon} className={image} />
+        <a 
+          title="ReactJs"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img 
+            src={ReactIcon} 
+            className={image} 
+            alt="React"
+          />
         </a>
-      </Item>
-      <Item>
-          <a>
-            <img
-              src={EmotionIcon}
-              className={image}
-              alt="Emotion"
-            />
-          </a>
-      </Item>
+        <a 
+          title="EmotionJs"
+          href="https://emotion.sh/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img 
+            src={EmotionIcon} 
+            className={image} 
+            alt="Emotion" />
+        </a>
     </List>
 
     <div className={navContainer}>
       <Nav />
     </div>
 
-    <p style={{textAlign:"center"}}>jeffsaenz.me</p>
+    <p>jeffsaenz.me</p>
 
   </Wrapper>
 )
