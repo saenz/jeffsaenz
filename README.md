@@ -11,7 +11,7 @@ The gcn starter includes a build with Contentful,  and Netlify. Inspired by [gat
 * React
 * [Emotion](https://emotion.sh)
 
-## Site
+## The Site
 
 http://www.jeffsaenz.me/
 
