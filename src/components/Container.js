@@ -36,7 +36,9 @@ const Container = ({ children, fluid }) => {
   				{ [ Base ] : true },
   				{ [ FixedWidth ]: !fluid }	
   			)}
-  		>{children}</div>
+  		>
+  			{children}
+  		</div>
   	)
 }
 

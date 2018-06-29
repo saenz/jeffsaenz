@@ -14,11 +14,13 @@ import BreadCrumb from "../components/BreadCrumb"
 import BreadCrumbItem from "../components/BreadCrumbItem"
 import Link from 'gatsby-link'
 
-import '../styles/reboot'
-import '../styles/main'
+//import '../styles/reboot'
+//import '../styles/main'
 
 import theme1 from '../styles/theme'
 
+import "typeface-pt-sans"
+import "typeface-oswald"
 
 const Template = (props) => {
 

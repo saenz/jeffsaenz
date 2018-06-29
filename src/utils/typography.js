@@ -1,30 +1,58 @@
-import Typography from 'typography';
+import Typography from "typography"
+import elkGlenTheme from "typography-theme-elk-glen"
+delete elkGlenTheme.googleFonts
+elkGlenTheme.baseFontSize = `16px`
+elkGlenTheme.baseLineHeight = 1.45
+elkGlenTheme.blockMarginBottom = 0.75
+elkGlenTheme.headerColor = `#253c28`
+elkGlenTheme.bodyColor = `#304f35`
+elkGlenTheme.accentColor = `#4c9e59`
+elkGlenTheme.monospaceFontFamily = [
+  `Space Mono`,
+  `SFMono-Regular`,
+  `Menlo`,
+  `Monaco`,
+  `Consolas`,
+  `Liberation Mono`,
+  `Courier New`,
+  `monospace`,
+]
 
-const config = require('../utils/siteConfig');
-
-const typography = new Typography({
-  title: 'Minimal',
-  baseFontSize: config.baseFontSize,
-  baseLineHeight: 1.66,
-  scaleRatio: 3.157,
-  headerFontFamily: [config.headerFontFamily, 'sans-serif'],
-  bodyFontFamily: [config.bodyFontFamily, 'sans-serif'],
-  headerWeight: 700,
-  googleFonts: [
-    {
-      name: config.headerFontFamily,
-      styles: ['700'],
+elkGlenTheme.overrideThemeStyles = ({ rhythm, scale }, options) => {
+console.log(scale(1))
+  return {
+    "h1, h2, h3, h4, h5, h6": {
+      textTransform: `uppercase`,
+      letterSpacing: `-.025em`,
     },
-    {
-      name: config.bodyFontFamily,
-      styles: ['400'],
+    h1: {
+      ...scale(1),
+      color: options.accentColor,
+      marginTop: `0 !important`,
+      lineHeight: 1,
     },
-  ],
-});
-
-// Hot reload typography in development.
-if (process.env.NODE_ENV !== 'production') {
-  typography.injectStyles();
+    a: {
+      textShadow: 'none',
+      backgroundImage: 'none'
+    },
+    li: {
+      listStyleType: 'none'
+    },
+    "@media (min-width: 640px)": {
+      html: {
+        fontSize: `${(21 / 17) * 100}%`,
+      },
+    },
+  }
 }
 
-export default typography;
+const typography = new Typography(elkGlenTheme)
+
+// Back out the below once Typography is upgraded for es6
+export default typography
+
+console.log("rhythm=" + JSON.stringify(typography.rhythm))
+
+export const options = typography.options
+export const scale = typography.scale
+export const rhythm = typography.rhythm
