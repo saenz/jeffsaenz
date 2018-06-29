@@ -5,4 +5,4 @@ The gcn starter includes a build with Contentful,  and Netlify. Inspired by [gat
 
 ## Site
 
-https://www.jeffsaenz.me/
+http://www.jeffsaenz.me/
